@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{% if not bool1_html %}Hello, Bootcamp. {% endif %}{{ var1_html }}</h1>
+    {% for fruits in list1_html %}
+        {% for numbers in range(int1_html) %}
+        <p>{{ fruits }} - {{ numbers }}</p>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>

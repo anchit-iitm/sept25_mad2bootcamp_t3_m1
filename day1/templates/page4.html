@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Page 4</h1>
+    <p>This is the content of page 4.</p>
+    <form action="/page4" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <label for="age">Age:</label>
+        <input type="number" name="age" placeholder="Enter your age" min="1" max="90" required>
+        <input type="submit" value="Submit">
+    </form>
+    {% if all_users_html %}
+        <h2>All Users:</h2>
+        <ul>
+            {% for user in all_users_html %}
+                <li>{{ user.name }} - {{ user.age }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+    <p>{{ message_html }}</p>
+    {% endif %}
+</body>
+</html>
