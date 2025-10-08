@@ -1,5 +1,5 @@
-from app import app
-from models import db
+from day2.app_v1 import app
+from day2.models.sample import db
 
 
 with app.app_context():
