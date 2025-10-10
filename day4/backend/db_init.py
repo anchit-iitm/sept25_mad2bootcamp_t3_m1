@@ -12,10 +12,12 @@ def init_roles():
 
 
 def init_admin():
+    from routes.security import ph
     if not user_datastore.find_user(email='admin@abc.com'):
         admin_user = user_datastore.create_user(
             email='admin@abc.com',
-            password='admin',
+            password=ph.hash('admin123'),
+            username='admin'
         )
         user_datastore.add_role_to_user(admin_user, 'admin')
         db.session.commit()
